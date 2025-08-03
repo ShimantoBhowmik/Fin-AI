@@ -160,7 +160,7 @@ const ResponsePanel: React.FC<ResponsePanelProps> = ({ analysisResult, isAnalyzi
                 <h2>Analysis Report</h2>
                 {analysisResult && (
                     <button onClick={downloadPDF} className="download-btn">
-                        📄 Download Report
+                        Download Report
                     </button>
                 )}
             </div>
@@ -196,7 +196,7 @@ const ResponsePanel: React.FC<ResponsePanelProps> = ({ analysisResult, isAnalyzi
                         
                         {/* Stock Chart Section */}
                         <div className="chart-section">
-                            <h4 className="section-title">📈 Price Chart</h4>
+                            <h4 className="section-title">Chart</h4>
                             <div className="chart-container">
                                 <TradingViewChart ticker={analysisResult.report.ticker} />
                             </div>
@@ -205,7 +205,7 @@ const ResponsePanel: React.FC<ResponsePanelProps> = ({ analysisResult, isAnalyzi
                         <div className="analysis-content">
                             {/* Analysis Report Section */}
                             <div className="report-section">
-                                <h4 className="section-title">📊 Analysis Report</h4>
+                                <h4 className="section-title">Analysis Report</h4>
                                 <div className="markdown-content">
                                     {renderMarkdown(analysisResult.report.analysis)}
                                 </div>
@@ -213,7 +213,7 @@ const ResponsePanel: React.FC<ResponsePanelProps> = ({ analysisResult, isAnalyzi
 
                             {/* Price Information Section */}
                             <div className="report-section">
-                                <h4 className="section-title">💰 Price Information</h4>
+                                <h4 className="section-title">Price Information</h4>
                                 <div className="price-details">
                                     <div className="price-item">
                                         <span className="label">Current Price:</span>
@@ -237,7 +237,7 @@ const ResponsePanel: React.FC<ResponsePanelProps> = ({ analysisResult, isAnalyzi
                             {/* Reddit Sentiment Section */}
                             {analysisResult.report.reddit_sentiment && (
                                 <div className="report-section">
-                                    <h4 className="section-title">🗣️ Reddit Sentiment</h4>
+                                    <h4 className="section-title">Reddit Sentiment</h4>
                                     <div className="sentiment-details">
                                         <div className="sentiment-item">
                                             <span className="label">Overall Sentiment:</span>
@@ -264,7 +264,7 @@ const ResponsePanel: React.FC<ResponsePanelProps> = ({ analysisResult, isAnalyzi
                             {/* Latest News Section */}
                             {analysisResult.report.news && analysisResult.report.news.length > 0 && (
                                 <div className="report-section">
-                                    <h4 className="section-title">📰 Latest News</h4>
+                                    <h4 className="section-title">Latest News</h4>
                                     <div className="news-list">
                                         {analysisResult.report.news.map((article, index) => (
                                             <div key={index} className="news-item">
@@ -289,7 +289,7 @@ const ResponsePanel: React.FC<ResponsePanelProps> = ({ analysisResult, isAnalyzi
                             {/* Fundamentals Section */}
                             {analysisResult.report.fundamentals && Object.keys(analysisResult.report.fundamentals).some(key => analysisResult.report.fundamentals[key] !== null) && (
                                 <div className="report-section">
-                                    <h4 className="section-title">📈 Fundamentals</h4>
+                                    <h4 className="section-title">Fundamentals</h4>
                                     <div className="fundamentals-grid">
                                         {Object.entries(analysisResult.report.fundamentals).map(([key, value], index) => {
                                             if (value !== null && value !== undefined) {
@@ -311,9 +311,7 @@ const ResponsePanel: React.FC<ResponsePanelProps> = ({ analysisResult, isAnalyzi
                 
                 {!isAnalyzing && !analysisResult && (
                     <div className="empty-state">
-                        <div className="empty-icon">📊</div>
                         <p>Start a conversation to see analysis results here.</p>
-                        <div className="empty-hint">Ask for stock analysis like "Give me analysis for $AAPL"</div>
                     </div>
                 )}
             </div>
