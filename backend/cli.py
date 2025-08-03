@@ -85,8 +85,8 @@ def analyze(tickers, date_range, no_news, no_reddit, no_charts, metrics, output_
             agent = StockAnalysisAgent()
             report = await agent.analyze_stocks(request)
 
-            click.echo(f"\n✅ Analysis complete!")
-            click.echo(f"📊 Report saved to: {report.report_path}")
+            click.echo(f"\nAnalysis complete!")
+            click.echo(f"Report saved to: {report.report_path}")
 
             # Print quick summary
             click.echo(f"\n📈 Quick Summary:")

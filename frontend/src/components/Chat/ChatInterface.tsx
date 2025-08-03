@@ -17,7 +17,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ onNewQuery, isAnalyzing, 
         if (analysisComplete && !isAnalyzing) {
             const completionMessage: Message = {
                 id: `completion-${Date.now()}`,
-                content: '✅ Analysis complete! Check the report on the right panel.',
+                content: 'Analysis complete! Check the report on the right panel.',
                 sender: 'bot',
                 timestamp: new Date()
             };
