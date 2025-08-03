@@ -1,0 +1,41 @@
+fastapi>=0.104.1
+uvicorn>=0.24.0
+ollama>=0.1.7
+pydantic>=2.0.0
+python-multipart>=0.0.6
+pytesseract>=0.3.10
+Pillow>=10.0.0
+
+# Core dependencies
+stagehand
+browserbase
+playwright
+pandas
+matplotlib
+seaborn
+numpy
+requests
+beautifulsoup4
+lxml
+
+# LLM integration with Ollama
+ollama
+langchain
+langchain-ollama
+
+# Data processing and analysis
+yfinance
+plotly
+jinja2
+
+# Report generation
+reportlab
+markdown
+pdfkit
+
+# Utilities
+python-dotenv
+pydantic
+pydantic-settings
+click
+loguru
