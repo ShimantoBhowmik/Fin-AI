@@ -1,6 +1,6 @@
-# Finance Bro Final Boss
+# Fin-AI
 
-![Finance Bro](finance-bro.png)
+![Fin-AI](finance-bro.png)
 
 ## Backend
 `ollama serve`
